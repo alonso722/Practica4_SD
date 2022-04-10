@@ -15,7 +15,7 @@ suma_prog_1(char *host,int a,int b)
 	dupla_int  suma_1_arg;
 
 #ifndef	DEBUG
-	clnt = clnt_create (host, SUMA_PROG, SUMA_VERS, "udp");
+	clnt = clnt_create (host, SUMA_PROG, SUMA_VERS, "udp");//Manejo del error de RPC de la llamada
 	if (clnt == NULL) {
 		clnt_pcreateerror (host);
 		exit (1);
